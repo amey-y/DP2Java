@@ -38,7 +38,6 @@ public class Order {
 		return "orderId= " + orderId + ", quantity= " + quantity + ", m= " + Arrays.toString(m);
 	}
 
-
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		Order od[] = new Order[3];
@@ -52,20 +51,34 @@ public class Order {
 			System.out.println("Enter Menu details:");
 			for(int j=0; j<m.length; j++)
 			{
-				System.out.println("Enter Menu Id: ");
+				System.out.println("Enter Menu Id:");
+				int menuId = sc.nextInt();
+				System.out.println("Enter Menu Name:");
+				String menuName = sc.next();
+				System.out.println("Enter Price of Menu:");
+				int price = sc.nextInt();
+				m[j] = new Menu(menuId, menuName, price);
 			}
-			
-			
-			
+			od[i] = new Order(orderId, quantity, m);
+		}
+		sc.close();
+		
+		for(Order o : od)
+		{
+			System.out.println(o);
 		}
 		
-		
-		
-		
-		
-		
-		
-		
+//		Calculate total Bill : Pending
+		int bill = 0;
+		for(Order o : od)
+		{
+			int total = 0;
+			for(Menu p : o.m)
+			{
+				total += p.price;
+			}
+			bill += total * o.quantity;
+		}
+		System.out.println("Total Bill: \u20B9"+ bill);
 	}
-
 }
