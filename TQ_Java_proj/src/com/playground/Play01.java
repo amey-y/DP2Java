@@ -9,6 +9,7 @@ public class Play01 {
 	
 	static void m1(long y)
 	{
+		int a =10;
 		System.out.println("LONG");
 	}
 	
@@ -21,6 +22,7 @@ public class Play01 {
 
 //		float i=3.5f;
 //		m1(i);
+		int a =10;
 		
 		char x = 'a', y = 'b';
 		char z = (char)(x+y);

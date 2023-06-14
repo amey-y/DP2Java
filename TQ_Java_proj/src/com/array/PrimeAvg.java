@@ -1,6 +1,6 @@
 package com.array;
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
 public class PrimeAvg {
 //		WAP to calculate average of prime numbers from the array.
 	public static int avgPrime(int arr[])
